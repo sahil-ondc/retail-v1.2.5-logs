@@ -1,0 +1,112 @@
+{
+  "context": {
+    "action": "update",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "http://localhost:7123/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "d880652c-e4d0-48ac-baf3-57f02c73d51a",
+    "timestamp": "2025-06-13T08:32:56.104Z",
+    "transaction_id": "624cf58c-e601-45ff-9ed4-0cddd7ce66da",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "http://localhost:7123/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "update_target": "item",
+    "order": {
+      "id": "988216",
+      "fulfillments": [
+        {
+          "type": "Return",
+          "tags": [
+            {
+              "code": "return_request",
+              "list": [
+                {
+                  "code": "id",
+                  "value": "31486c70-ade0-4c96-a9da-a9ba81b012b7"
+                },
+                {
+                  "code": "item_id",
+                  "value": "I1"
+                },
+                {
+                  "code": "parent_item_id",
+                  "value": "2"
+                },
+                {
+                  "code": "item_quantity",
+                  "value": "1"
+                },
+                {
+                  "code": "reason_id",
+                  "value": "001"
+                },
+                {
+                  "code": "reason_desc",
+                  "value": "detailed description for return"
+                },
+                {
+                  "code": "images",
+                  "value": "https://sellerNP.com/images/store1.png"
+                },
+                {
+                  "code": "ttl_approval",
+                  "value": "PT24H"
+                },
+                {
+                  "code": "ttl_reverseqc",
+                  "value": "P3D"
+                }
+              ]
+            },
+            {
+              "code": "return_request",
+              "list": [
+                {
+                  "code": "id",
+                  "value": "49e1fa88-a719-4faa-83b0-334e7a89f576"
+                },
+                {
+                  "code": "item_id",
+                  "value": "I2"
+                },
+                {
+                  "code": "parent_item_id",
+                  "value": "2"
+                },
+                {
+                  "code": "item_quantity",
+                  "value": "1"
+                },
+                {
+                  "code": "reason_id",
+                  "value": "001"
+                },
+                {
+                  "code": "reason_desc",
+                  "value": "detailed description for return"
+                },
+                {
+                  "code": "images",
+                  "value": "https://sellerNP.com/images/store1.png"
+                },
+                {
+                  "code": "ttl_approval",
+                  "value": "PT24H"
+                },
+                {
+                  "code": "ttl_reverseqc",
+                  "value": "P3D"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
