@@ -1,0 +1,103 @@
+{
+  "context": {
+    "action": "on_select",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "http://localhost:7124/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:0161",
+    "country": "IND",
+    "message_id": "bf1731cc-bd69-4c4a-b009-bd7556075885",
+    "timestamp": "2025-06-16T14:13:00.769Z",
+    "transaction_id": "0a0236ec-a7e0-44a3-a2fe-d996e1a21b43",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "http://localhost:7124/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Delivery",
+          "@ondc/org/provider_name": "LSP or Provider Name",
+          "tracking": true,
+          "@ondc/org/category": "Standard Delivery",
+          "@ondc/org/TAT": "P3D",
+          "state": {
+            "descriptor": {
+              "code": "Serviceable"
+            }
+          }
+        }
+      ],
+      "quote": {
+        "breakup": [
+          {
+            "@ondc/org/item_id": "I1",
+            "@ondc/org/item_quantity": {
+              "count": 1
+            },
+            "title": "Butterfly Beautiful 12 Gold Necklace",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "2260.00"
+            },
+            "item": {
+              "quantity": {
+                "available": {
+                  "count": "99"
+                },
+                "maximum": {
+                  "count": "10"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "2260"
+              }
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Delivery charges",
+            "@ondc/org/title_type": "delivery",
+            "price": {
+              "currency": "INR",
+              "value": "493.75"
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Convenience Fee",
+            "@ondc/org/title_type": "misc",
+            "price": {
+              "currency": "INR",
+              "value": "3.00"
+            }
+          }
+        ],
+        "price": {
+          "currency": "INR",
+          "value": "2756.75"
+        },
+        "ttl": "P1D"
+      },
+      "items": [
+        {
+          "id": "I1",
+          "fulfillment_id": "F1"
+        }
+      ]
+    }
+  }
+}

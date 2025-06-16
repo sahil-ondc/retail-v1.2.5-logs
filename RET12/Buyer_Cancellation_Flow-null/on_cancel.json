@@ -1,0 +1,299 @@
+{
+  "context": {
+    "action": "on_cancel",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "http://localhost:7124/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:0161",
+    "country": "IND",
+    "message_id": "238eaac5-fdce-42e9-9301-3ffe090d4321",
+    "timestamp": "2025-06-16T14:15:04.940Z",
+    "transaction_id": "0a0236ec-a7e0-44a3-a2fe-d996e1a21b43",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "http://localhost:7124/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "state": "Cancelled",
+      "items": [
+        {
+          "id": "I1",
+          "fulfillment_id": "F1",
+          "quantity": {
+            "count": 0
+          },
+          "location_id": "L1"
+        },
+        {
+          "id": "I1",
+          "quantity": {
+            "count": 1
+          },
+          "fulfillment_id": "cancel_id_8189"
+        }
+      ],
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "billing": {
+        "address": {
+          "building": "my building name or house",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "country": "IND",
+          "area_code": "560027",
+          "locality": "my street name",
+          "name": "my house or door or floor"
+        },
+        "phone": "9898989898",
+        "name": "ONDC Buyer",
+        "email": "nobody@nomail.com",
+        "created_at": "2025-06-16T14:12:57.733Z",
+        "updated_at": "2025-06-16T14:12:57.733Z"
+      },
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Delivery",
+          "tracking": true,
+          "state": {
+            "descriptor": {
+              "code": "Cancelled"
+            }
+          },
+          "@ondc/org/TAT": "P3D",
+          "@ondc/org/provider_name": "mock_provider_name_0",
+          "start": {
+            "location": {
+              "id": "L1",
+              "descriptor": {
+                "name": "ABC Store"
+              },
+              "gps": "19.129076,72.825803",
+              "address": {
+                "building": "my building name or house",
+                "city": "Mumbai",
+                "state": "Maharashtra",
+                "country": "IND",
+                "area_code": "400053",
+                "locality": "my street name",
+                "name": "my house or door or floor"
+              }
+            },
+            "contact": {
+              "phone": "9594663710",
+              "email": "nobody@nomail.com"
+            }
+          },
+          "end": {
+            "contact": {
+              "email": "nobody@nomail.com",
+              "phone": "9898989898"
+            },
+            "person": {
+              "name": "mock-person"
+            },
+            "location": {
+              "gps": "21.3213,12.1231",
+              "address": {
+                "building": "mock-building",
+                "city": "mock-city",
+                "state": "mock-state",
+                "country": "IND",
+                "area_code": "141008",
+                "locality": "mock-locality",
+                "name": "mock-house-name"
+              }
+            }
+          },
+          "tags": [
+            {
+              "code": "cancel_request",
+              "list": [
+                {
+                  "code": "reason_id",
+                  "value": "021"
+                },
+                {
+                  "code": "initiated_by",
+                  "value": "dev-automation.ondc.org"
+                }
+              ]
+            },
+            {
+              "code": "precancel_state",
+              "list": [
+                {
+                  "code": "fulfillment_state",
+                  "value": "Pending"
+                },
+                {
+                  "code": "updated_at",
+                  "value": "2025-06-16T14:15:04.943Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cancel_id_8189",
+          "type": "Cancel",
+          "state": {
+            "descriptor": {
+              "code": "Cancelled"
+            }
+          },
+          "tags": [
+            {
+              "code": "quote_trail",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "item"
+                },
+                {
+                  "code": "id",
+                  "value": "I1"
+                },
+                {
+                  "code": "currency",
+                  "value": "INR"
+                },
+                {
+                  "code": "value",
+                  "value": "-2260.00"
+                }
+              ]
+            },
+            {
+              "code": "quote_trail",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "delivery"
+                },
+                {
+                  "code": "id",
+                  "value": "F1"
+                },
+                {
+                  "code": "currency",
+                  "value": "INR"
+                },
+                {
+                  "code": "value",
+                  "value": "-493.75"
+                }
+              ]
+            },
+            {
+              "code": "quote_trail",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "misc"
+                },
+                {
+                  "code": "id",
+                  "value": "F1"
+                },
+                {
+                  "code": "currency",
+                  "value": "INR"
+                },
+                {
+                  "code": "value",
+                  "value": "-3.00"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "breakup": [
+          {
+            "@ondc/org/item_id": "I1",
+            "title": "Butterfly Beautiful 12 Gold Necklace",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            },
+            "item": {
+              "price": {
+                "currency": "INR",
+                "value": "2260"
+              }
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Delivery charges",
+            "@ondc/org/title_type": "delivery",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Convenience Fee",
+            "@ondc/org/title_type": "misc",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          }
+        ],
+        "price": {
+          "currency": "INR",
+          "value": "2756.75"
+        },
+        "ttl": "P1D"
+      },
+      "payment": {
+        "params": {
+          "amount": "2756.75",
+          "currency": "INR",
+          "transaction_id": "mock_payment_id_123"
+        },
+        "status": "PAID",
+        "type": "ON-ORDER",
+        "collected_by": "BAP",
+        "uri": "https://razorpay.com/",
+        "tl_method": "http/get",
+        "@ondc/org/buyer_app_finder_fee_type": "percent",
+        "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+        "@ondc/org/settlement_details": [
+          {
+            "settlement_counterparty": "seller-app",
+            "settlement_phase": "sale-amount",
+            "settlement_type": "neft",
+            "beneficiary_name": "xxxx",
+            "settlement_bank_account_no": "XXXX",
+            "settlement_ifsc_code": "XXXX",
+            "bank_name": "XXXX",
+            "branch_name": "XXXX"
+          }
+        ]
+      },
+      "id": "642922",
+      "created_at": "2025-06-16T14:13:06.856Z",
+      "updated_at": "2025-06-16T14:15:04.943Z",
+      "cancellation": {
+        "cancelled_by": "dev-automation.ondc.org",
+        "reason": {
+          "id": "021"
+        }
+      }
+    }
+  }
+}
