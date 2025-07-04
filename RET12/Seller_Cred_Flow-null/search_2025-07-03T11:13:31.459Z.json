@@ -1,0 +1,70 @@
+{
+  "context": {
+    "action": "search",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "443207f1-3583-4233-ab06-d471e80884f4",
+    "timestamp": "2025-07-03T11:13:31.459Z",
+    "transaction_id": "b7142fce-028a-415a-b649-9f6d8620607b",
+    "core_version": "1.2.5",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "intent": {
+      "fulfillment": {
+        "type": "Delivery"
+      },
+      "payment": {
+        "@ondc/org/buyer_app_finder_fee_type": "percent",
+        "@ondc/org/buyer_app_finder_fee_amount": "3"
+      },
+      "tags": [
+        {
+          "code": "bap_terms",
+          "list": [
+            {
+              "code": "static_terms",
+              "value": ""
+            },
+            {
+              "code": "static_terms_new",
+              "value": "https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf"
+            },
+            {
+              "code": "effective_date",
+              "value": "2025-02-01T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "code": "bap_features",
+          "list": [
+            {
+              "code": "006",
+              "value": "yes"
+            },
+            {
+              "code": "00B",
+              "value": "yes"
+            },
+            {
+              "code": "012",
+              "value": "yes"
+            },
+            {
+              "code": "017",
+              "value": "yes"
+            },
+            {
+              "code": "01D",
+              "value": "yes"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

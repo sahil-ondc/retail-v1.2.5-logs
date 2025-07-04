@@ -1,0 +1,30 @@
+{
+  "context": {
+    "action": "on_search",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "*",
+    "country": "IND",
+    "message_id": "385b3922-f48d-403d-8aff-508334d1c5d8",
+    "timestamp": "2025-07-03T11:14:43.295Z",
+    "transaction_id": "e82fa1ca-4d68-4ed9-963f-07526e5a1074",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "catalog": {
+      "bpp/providers": [
+        {
+          "id": "P1",
+          "time": {
+            "label": "disable",
+            "timestamp": "2025-07-03T11:14:43.295Z"
+          }
+        }
+      ]
+    }
+  }
+}

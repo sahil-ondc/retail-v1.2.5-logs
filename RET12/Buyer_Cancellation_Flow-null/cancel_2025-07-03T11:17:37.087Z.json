@@ -1,0 +1,21 @@
+{
+  "context": {
+    "action": "cancel",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "4e4b0e3b-d858-4e41-ae66-c8dc8e81f370",
+    "timestamp": "2025-07-03T11:17:37.087Z",
+    "transaction_id": "a5a7f0c3-806f-4311-9327-b778bf409a20",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order_id": "221260",
+    "cancellation_reason_id": "001"
+  }
+}

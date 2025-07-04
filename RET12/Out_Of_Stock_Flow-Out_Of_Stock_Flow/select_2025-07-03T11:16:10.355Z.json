@@ -1,0 +1,50 @@
+{
+  "context": {
+    "action": "select",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "9aae7f1f-4911-40d0-8c86-9ab691901f54",
+    "timestamp": "2025-07-03T11:16:10.355Z",
+    "transaction_id": "6d678519-8ed4-49a7-9ebe-334b592e2ea2",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "I3",
+          "quantity": {
+            "count": 2
+          },
+          "location_id": "L1"
+        }
+      ],
+      "fulfillments": [
+        {
+          "end": {
+            "location": {
+              "gps": "12.966545,77.592074",
+              "address": {
+                "area_code": "560027"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

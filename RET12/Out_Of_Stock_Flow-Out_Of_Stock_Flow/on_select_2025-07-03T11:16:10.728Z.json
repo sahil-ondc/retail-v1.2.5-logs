@@ -1,0 +1,90 @@
+{
+  "context": {
+    "action": "on_select",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "9aae7f1f-4911-40d0-8c86-9ab691901f54",
+    "timestamp": "2025-07-03T11:16:10.728Z",
+    "transaction_id": "6d678519-8ed4-49a7-9ebe-334b592e2ea2",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Delivery",
+          "@ondc/org/provider_name": "Seller Business",
+          "tracking": true,
+          "@ondc/org/category": "Standard Delivery",
+          "@ondc/org/TAT": "P3D",
+          "state": {
+            "descriptor": {
+              "code": "Serviceable"
+            }
+          }
+        }
+      ],
+      "quote": {
+        "price": {
+          "value": "0.00",
+          "currency": "INR"
+        },
+        "breakup": [
+          {
+            "@ondc/org/item_id": "I3",
+            "@ondc/org/item_quantity": {
+              "count": 0
+            },
+            "title": "Sleeping Rabbit Printed Oversized T-shirt for Men - black/S",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            },
+            "item": {
+              "quantity": {
+                "available": {
+                  "count": "0"
+                },
+                "maximum": {
+                  "count": "0"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "0.00"
+              }
+            }
+          }
+        ],
+        "ttl": "P1D"
+      },
+      "items": [
+        {
+          "id": "I3",
+          "fulfillment_id": "F1"
+        }
+      ]
+    }
+  },
+  "error": {
+    "type": "DOMAIN-ERROR",
+    "code": "40002",
+    "message": "[{\"item_id\":\"I3\",\"error\":\"40002\"}]"
+  }
+}

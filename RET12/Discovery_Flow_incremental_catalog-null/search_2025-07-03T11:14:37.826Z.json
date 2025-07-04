@@ -1,0 +1,34 @@
+{
+  "context": {
+    "action": "search",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "*",
+    "country": "IND",
+    "message_id": "c5b6ea20-85bf-4b9b-840d-a1970c38439a",
+    "timestamp": "2025-07-03T11:14:37.826Z",
+    "transaction_id": "e82fa1ca-4d68-4ed9-963f-07526e5a1074",
+    "core_version": "1.2.5",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "intent": {
+      "payment": {
+        "@ondc/org/buyer_app_finder_fee_type": "percent",
+        "@ondc/org/buyer_app_finder_fee_amount": "3"
+      },
+      "tags": [
+        {
+          "code": "catalog_inc",
+          "list": [
+            {
+              "code": "mode",
+              "value": "start"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

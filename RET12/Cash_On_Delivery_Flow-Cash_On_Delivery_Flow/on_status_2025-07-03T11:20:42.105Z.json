@@ -1,0 +1,234 @@
+{
+  "context": {
+    "action": "on_status",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer",
+    "domain": "ONDC:RET12",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "867ee1c9-5ca8-4697-9754-7a8683133ef2",
+    "timestamp": "2025-07-03T11:20:42.105Z",
+    "transaction_id": "c2a0d747-4b89-4e08-8404-75ddf78c7c96",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "state": "In-progress",
+      "items": [
+        {
+          "id": "I1",
+          "fulfillment_id": "F1",
+          "quantity": {
+            "count": 3
+          },
+          "location_id": "L1"
+        }
+      ],
+      "billing": {
+        "address": {
+          "building": "my building name or house",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "country": "IND",
+          "area_code": "560027",
+          "locality": "my street name",
+          "name": "my house or door or floor"
+        },
+        "phone": "9898989898",
+        "name": "ONDC Buyer",
+        "email": "nobody@nomail.com",
+        "created_at": "2025-07-03T11:20:30.472Z",
+        "updated_at": "2025-07-03T11:20:30.472Z"
+      },
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Delivery",
+          "tracking": true,
+          "state": {
+            "descriptor": {
+              "code": "Packed"
+            }
+          },
+          "@ondc/org/TAT": "P3D",
+          "@ondc/org/provider_name": "Seller Business",
+          "start": {
+            "location": {
+              "id": "L1",
+              "descriptor": {
+                "name": "Mock Seller NP"
+              },
+              "gps": "12.925810,77.583624",
+              "address": {
+                "building": "my building name or house",
+                "city": "Bengaluru",
+                "state": "Karnataka",
+                "country": "IND",
+                "area_code": "560011",
+                "locality": "my street name",
+                "name": "my house or door or floor"
+              }
+            },
+            "contact": {
+              "phone": "9594663710",
+              "email": "nobody@nomail.com"
+            },
+            "time": {
+              "range": {
+                "start": "2025-07-03T11:30:39.110Z",
+                "end": "2025-07-03T11:40:39.110Z"
+              }
+            }
+          },
+          "end": {
+            "contact": {
+              "email": "nobody@nomail.com",
+              "phone": "9898989898"
+            },
+            "person": {
+              "name": "mock-person"
+            },
+            "location": {
+              "gps": "12.971600,77.594600",
+              "address": {
+                "building": "mock-building",
+                "city": "mock-city",
+                "state": "mock-state",
+                "country": "IND",
+                "area_code": "560001",
+                "locality": "mock-locality",
+                "name": "mock-house-name"
+              }
+            },
+            "time": {
+              "range": {
+                "start": "2025-07-03T11:40:39.110Z",
+                "end": "2025-07-06T11:30:39.110Z"
+              }
+            }
+          },
+          "tags": [
+            {
+              "code": "routing",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "P2P"
+                }
+              ]
+            },
+            {
+              "code": "tracking",
+              "list": [
+                {
+                  "code": "gps_enabled",
+                  "value": "no"
+                },
+                {
+                  "code": "url_enabled",
+                  "value": "yes"
+                },
+                {
+                  "code": "url",
+                  "value": "https://sellerNP.com/ondc/tracking_url"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "breakup": [
+          {
+            "@ondc/org/item_id": "I1",
+            "@ondc/org/item_quantity": {
+              "count": 3
+            },
+            "title": "Butterfly Beautiful 12 Gold Necklace",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "6780.00"
+            },
+            "item": {
+              "price": {
+                "currency": "INR",
+                "value": "2260"
+              }
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Delivery charges",
+            "@ondc/org/title_type": "delivery",
+            "price": {
+              "currency": "INR",
+              "value": "493.75"
+            }
+          },
+          {
+            "@ondc/org/item_id": "F1",
+            "title": "Convenience Fee",
+            "@ondc/org/title_type": "misc",
+            "price": {
+              "currency": "INR",
+              "value": "3.00"
+            }
+          }
+        ],
+        "price": {
+          "currency": "INR",
+          "value": "7276.75"
+        },
+        "ttl": "P1D"
+      },
+      "payment": {
+        "params": {
+          "currency": "INR",
+          "amount": "7276.75"
+        },
+        "@ondc/org/settlement_details": [
+          {
+            "settlement_counterparty": "seller-app",
+            "settlement_phase": "sale-amount",
+            "settlement_type": "upi",
+            "beneficiary_name": "Xyz",
+            "upi_address": "abc@upi",
+            "settlement_bank_account_no": "12345588548",
+            "settlement_ifsc_code": "sdsd0005685",
+            "bank_name": "ABC",
+            "branch_name": "XYZ"
+          }
+        ],
+        "type": "ON-FULFILLMENT",
+        "status": "NOT-PAID",
+        "collected_by": "BPP",
+        "@ondc/org/buyer_app_finder_fee_type": "percent",
+        "@ondc/org/buyer_app_finder_fee_amount": "3",
+        "@ondc/org/settlement_basis": "delivery",
+        "@ondc/org/settlement_window": "P1D",
+        "@ondc/org/withholding_amount": "10.00"
+      },
+      "id": "192858",
+      "created_at": "2025-07-03T11:20:36.153Z",
+      "updated_at": "2025-07-03T11:20:42.105Z",
+      "documents": [
+        {
+          "url": "https://invoice_url",
+          "label": "Invoice"
+        }
+      ]
+    }
+  }
+}
