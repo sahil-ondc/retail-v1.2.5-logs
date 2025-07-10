@@ -1,0 +1,109 @@
+{
+  "context": {
+    "action": "select",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer",
+    "domain": "ONDC:RET14",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "d354de4e-f0a6-4213-940e-cd2dff274acb",
+    "timestamp": "2025-07-09T12:10:05.504Z",
+    "transaction_id": "e5c8e9f6-c472-4e07-95b7-46a87f3e3b23",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "I1",
+          "quantity": {
+            "count": 3
+          },
+          "location_id": "L1",
+          "parent_item_id": "D1",
+          "tags": [
+            {
+              "code": "type",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "item"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I2",
+          "quantity": {
+            "count": 3
+          },
+          "location_id": "L1"
+        },
+        {
+          "id": "C1",
+          "quantity": {
+            "count": 1
+          },
+          "parent_item_id": "DI1",
+          "descriptor": {
+            "tags": [
+              {
+                "code": "customization",
+                "list": [
+                  {
+                    "code": "input_text",
+                    "value": "Be careful with the delivery of the item"
+                  }
+                ]
+              }
+            ]
+          },
+          "tags": [
+            {
+              "code": "type",
+              "list": [
+                {
+                  "code": "type",
+                  "value": "customization"
+                }
+              ]
+            },
+            {
+              "code": "parent",
+              "list": [
+                {
+                  "code": "id",
+                  "value": "CG1"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "end": {
+            "location": {
+              "gps": "12.971600,77.594600",
+              "address": {
+                "area_code": "560001"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

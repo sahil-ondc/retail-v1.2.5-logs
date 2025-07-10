@@ -1,0 +1,40 @@
+{
+  "context": {
+    "action": "update",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer",
+    "domain": "ONDC:RET14",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "c756ac62-e3c8-4e3f-b7b2-c4f0ed35b821",
+    "timestamp": "2025-07-09T11:27:24.277Z",
+    "transaction_id": "cff5ed18-d89c-43d5-af41-9d1fe264efed",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller"
+  },
+  "message": {
+    "update_target": "payment",
+    "order": {
+      "id": "282141",
+      "fulfillments": [
+        {
+          "id": "C1123",
+          "type": "Cancel"
+        }
+      ],
+      "payment": {
+        "@ondc/org/settlement_details": [
+          {
+            "settlement_counterparty": "buyer",
+            "settlement_phase": "refund",
+            "settlement_type": "netbanking",
+            "settlement_amount": "2260",
+            "settlement_timestamp": "2025-07-09T11:27:24.279Z"
+          }
+        ]
+      }
+    }
+  }
+}

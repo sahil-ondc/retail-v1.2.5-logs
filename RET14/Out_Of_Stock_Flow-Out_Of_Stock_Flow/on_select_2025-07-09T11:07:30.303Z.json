@@ -1,0 +1,120 @@
+{
+  "context": {
+    "action": "on_select",
+    "bap_id": "dev-automation.ondc.org",
+    "bap_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer",
+    "domain": "ONDC:RET14",
+    "city": "std:080",
+    "country": "IND",
+    "message_id": "0ad73a18-cf2c-4855-8bb5-2fbe6b56faec",
+    "timestamp": "2025-07-09T11:07:30.303Z",
+    "transaction_id": "3126678d-8a71-43f6-8d36-6806e10c5824",
+    "core_version": "1.2.5",
+    "ttl": "PT30S",
+    "bpp_id": "dev-automation.ondc.org",
+    "bpp_uri": "https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "P1",
+        "locations": [
+          {
+            "id": "L1"
+          }
+        ]
+      },
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Delivery",
+          "@ondc/org/provider_name": "LSP or Provider Name",
+          "tracking": true,
+          "@ondc/org/category": "Standard Delivery",
+          "@ondc/org/TAT": "P3D",
+          "state": {
+            "descriptor": {
+              "code": "Serviceable"
+            }
+          }
+        }
+      ],
+      "quote": {
+        "price": {
+          "value": "0.00",
+          "currency": "INR"
+        },
+        "breakup": [
+          {
+            "@ondc/org/item_id": "I1",
+            "@ondc/org/item_quantity": {
+              "count": 0
+            },
+            "title": "Power Bank",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            },
+            "item": {
+              "quantity": {
+                "available": {
+                  "count": "0"
+                },
+                "maximum": {
+                  "count": "0"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "0.00"
+              }
+            }
+          },
+          {
+            "@ondc/org/item_id": "I2",
+            "@ondc/org/item_quantity": {
+              "count": 0
+            },
+            "title": "Adaptor  25W C  type",
+            "@ondc/org/title_type": "item",
+            "price": {
+              "currency": "INR",
+              "value": "0.00"
+            },
+            "item": {
+              "quantity": {
+                "available": {
+                  "count": "0"
+                },
+                "maximum": {
+                  "count": "0"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "0.00"
+              }
+            }
+          }
+        ],
+        "ttl": "P1D"
+      },
+      "items": [
+        {
+          "id": "I1",
+          "fulfillment_id": "F1"
+        },
+        {
+          "id": "I2",
+          "fulfillment_id": "F1"
+        }
+      ]
+    }
+  },
+  "error": {
+    "type": "DOMAIN-ERROR",
+    "code": "40002",
+    "message": "[{\"item_id\":\"I1\",\"error\":\"40002\"}]"
+  }
+}
